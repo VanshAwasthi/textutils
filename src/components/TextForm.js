@@ -6,18 +6,21 @@ export default function TextForm(props) {
     // console.log("Uppercase was click "+ text);not necessary
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to UpperCase","success");
   }
 
   const handleLoClick = ()=>{
     // console.log("Uppercase was click "+ text);not necessary
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to LowerCase","success");
   }
 
   const handleClearClick = ()=>{
     // console.log("Uppercase was click "+ text);not necessary
     let newText = '';
     setText(newText);
+    props.showAlert("Text is Cleared","success");
   }
   const handleextractEmails = () => {
     return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi)+ ",";
@@ -27,11 +30,13 @@ export default function TextForm(props) {
       let text = document.getElementById("myBox");
       text.select();
       navigator.clipboard.writeText(text.value);
+      props.showAlert("Text is copied to Clipboard","success");
   }
 
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
-    setText(newText.join(" "))
+    setText(newText.join(" "));
+    props.showAlert("Extra Spaces are removed","success");
 }
 
   const handleOnChange = (event)=>{
