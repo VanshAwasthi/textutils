@@ -1,5 +1,4 @@
 // import logo from './logo.svg';
-// import React from "react";
 import './App.css';
 import Navbar from './components/Navbar';
 import PropTypes from 'prop-types';
@@ -28,6 +27,7 @@ function App() {
     }, 1500);
   }
   const toggleRoutes = ()=>{
+    // console.log(cls); 
     if(mode ==='light'){
         setMode('dark');
         document.body.style.backgroundColor='#042743';
@@ -47,9 +47,9 @@ function App() {
       <Alert alert={alert} />
       <div className="container my-3" >
       <Routes>
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About mode={mode} />} />
                         
-          <Route path="/" element={<TextForm  showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>} />
+          <Route path="/" element={<TextForm  showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove extra spaces" mode={mode}/>} />
            
         </Routes>
       {/* <TextForm  showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/> */}
