@@ -14,7 +14,7 @@ export default function Hell(props) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
-               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+               <Link className="nav-link " aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
               {/* <a className="nav-link" href="/about">{props.aboutText}</a> */}
@@ -26,13 +26,19 @@ export default function Hell(props) {
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form> */}
           {/* **onClick ko function call nhi balki function chaheye hota hai** */}
+          {/* extra  for color pallet*/}
           {/* <div className="d-flex">
-            <div className="bg-primary rounded mx-3" onClick={()=>{props.toggleRoutes('primary')}} style={{height:'30px', width:'30px' }}></div>
+            <div className="bg-primary rounded mx-3" onClick={()=>{props.toggleRoutes('primary')}} style={{height:'30px', width:'30px'  , cursor:'pointer' }}></div>
+            <div className="bg-success rounded mx-3" onClick={()=>{props.toggleRoutes('success')}} style={{height:'30px', width:'30px'  , cursor:'pointer' }}></div>
+            <div className="bg-danger rounded mx-3" onClick={()=>{props.toggleRoutes('danger')}} style={{height:'30px', width:'30px'  , cursor:'pointer' }}></div>
+            <div className="bg-warning rounded mx-3" onClick={()=>{props.toggleRoutes('warning')}} style={{height:'30px', width:'30px'  , cursor:'pointer' }}></div>
           </div> */}
+          {/* extra */}
           <div className={`form-check form-switch text-${props.mode ==='light'? 'dark' : 'light'}`}>
           <input className="form-check-input" onClick={props.toggleRoutes} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-          {/* <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label> */}
-          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Toggle Mode</label>
+          {/* <input className="form-check-input" onClick={()=>{props.toggleRoutes(null)}} type="checkbox" role="switch" id="flexSwitchCheckDefault"/> */}
+          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+          {/* <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Toggle Mode for color pallet</label>  */}
         </div>
         </div>
       </div>

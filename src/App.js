@@ -26,8 +26,18 @@ function App() {
       setAlert(null);
     }, 1500);
   }
+
+// const removeBodyClasses = ()=>{
+//   document.body.ClassList.remove('bg-primary');
+//   document.body.ClassList.remove('bg-success');
+//   document.body.ClassList.remove('bg-warning');
+//   document.body.ClassList.remove('bg-danger');
+// }
+
   const toggleRoutes = ()=>{
-    // console.log(cls); 
+    // console.log(cls);//extra for color pallet
+    // removeBodyClasses();
+    // document.body.classList.add('bg-'+cls)
     if(mode ==='light'){
         setMode('dark');
         document.body.style.backgroundColor='#042743';
